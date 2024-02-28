@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="icon.webp">
+    <title>Nba Giveaway.com</title>
+</head>
+<body>
+    <h1><span class="N">NBA</span> <span class="B">JERSEY</span> <span class="A">GIVEAWAY</span></h1>
+
+    <div class="container">
+        <div class="row">
+         <div class="col-1">
+            <img src="image/isiah thomas all star jersey.avif" alt="" class="image">
+            <img src="image/jordan jersey.avif" alt="" class="image">
+            <img src="image/larry bird all star jersey.avif" alt="" class="image">
+            <img src="image/lebron james jersey.avif" alt="" class="image">
+         </div>
+         <div class="col-2">
+             <p>Everyone stands a chance to win free nba jerseys from the nba league.This involves a vintage Micheal jordan bulls jersey, Larry bird celtics jersey, Stepehn curry warrirors jersey, Isiah thomas bad boy pistons jersey, Scottie Pippen Bulls jersey.Available to the frist 20 customers who are intrested.It only lasts a limited time so all nba lovers who are intrested feel free and get yours.</p>
+             <button class="btn"><a href="">Get your prize in 10 days</a></button>
+           <div class="shape">
+             <div class="cards" id="display"></div>
+           </div>
+
+        </div>
+   </div>
+ </div>
+</body>
+<script>
+    var countDownDate = new Date(" March 8, 2024 00:00:00").getTime();
+    var x = setInterval(function(){
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+       
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("display").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+    clearInterval(x);
+    countDownDate = new Date("March 6,  2024 00:00:00").getTime(); 
+    // Change the date to the new countdown end date
+        }
+}, 1000);
+
+</script>
+<script>
+    var images = document.getElementsByTagName('img');
+    var index = 0;
+
+    function slideshow() {
+        images[index].style.display = 'none';
+        index = (index + 1) % images.length;
+        images[index].style.display = 'block';
+        setTimeout(slideshow, 2000);
+    }
+
+    slideshow();
+</script>
+</html>
